@@ -90,8 +90,7 @@ public class Assignment3 {
             //add 1 to the sums array in the position of the actual number in question
             sums[array[position]] += 1;
 
-        }
-        
+        } 
         //create the new array
         //create a vaiable to keep teack of while position in the new array is being modified
         int positionHolder = 0;
@@ -109,20 +108,18 @@ public class Assignment3 {
 
     //question 5
     public void alphInsertionSort(String[] array) {
-        //create an int starting at the back of the array to 
-        int position = array.length - 1;
-        //an integer to keep track of how sorted the array is
-        int sortCount = 0;
-        //check to see if the current position is greater than the position before it
-        while (array[position].compareTo(array[position - 1]) == -1) {
-            //it is so swap this position before it
-            swap(array, position, position - 1);
-            //adjust the position since our number of interest is in a new spot
-            position--;
+        //start a for loop to go through the array
+        for(int position = 0; position < array.length-1; position++){
+            //create a second position starting at this position to go back through the array to check numbers
+            int position2 = position;
+            //While the letter after this one is less than it is, swap the two of them
+            while(position2 >= 0 && (array[position2].compareTo(array[position2+1]) > 0)){
+                //the position before it is greater than it is so swap them
+                swap(array, position2, position2 + 1);
+                //now move to check the next position closer to the front of the array
+                position2--;
+            }
         }
-        //Now since a new number is in the back we repeat the process
-        alphInsertionSort(array);
-
     }
 
     /**
@@ -211,11 +208,11 @@ public class Assignment3 {
         
         System.out.println("ASSIGNMENT 5");
         String[] lettersFive = new String[5];
-        lettersFive[1] = "b";
-        lettersFive[2] = "c";
-        lettersFive[3] = "e";
-        lettersFive[4] = "a";
-        lettersFive[5] = "d";
+        lettersFive[0] = "b";
+        lettersFive[1] = "c";
+        lettersFive[2] = "e";
+        lettersFive[3] = "a";
+        lettersFive[4] = "d";
 
         //before
         System.out.println("BEFORE:");
