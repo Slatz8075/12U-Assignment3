@@ -209,9 +209,9 @@ public class Assignment3 {
         System.out.println("ASSIGNMENT 5");
         String[] lettersFive = new String[5];
         lettersFive[0] = "b";
-        lettersFive[1] = "c";
-        lettersFive[2] = "e";
-        lettersFive[3] = "a";
+        lettersFive[1] = "n";
+        lettersFive[2] = "m";
+        lettersFive[3] = "p";
         lettersFive[4] = "d";
 
         //before
